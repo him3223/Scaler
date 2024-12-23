@@ -1,24 +1,26 @@
-public class Solution {
-    public int solve(int A, int B, int[] C) {
-        // Start with the player B having the ball
-        int currentPlayer = B;
-        int previousPlayer = -1; // There's no previous player at the start
-        
-        // Process each pass
+import java.util.Stack;
+public class ballPass {
+    public static int solve(int A, int B, int[] C) {
+        Stack<Integer> stack = new Stack<>(); // To track the ball possession history
+        stack.push(B); // Initially, player B has the ball
+
         for (int i = 0; i < A; i++) {
-            if (C[i] != 0) {
-                // Forward pass: update previous and current player
-                previousPlayer = currentPlayer;
-                currentPlayer = C[i];
+            if (C[i] == 0) {
+                // Back Pass: Revert to the previous possessor of the ball
+                stack.pop();
             } else {
-                // Back pass: return the ball to the previous player
-                currentPlayer = previousPlayer;
-                // Update previous player to the one who had the ball before the current one
-                previousPlayer = -1;  // After a back pass, no one is the previous player
+                // Forward Pass: Pass the ball to the player with id C[i]
+                stack.push(C[i]);
             }
         }
-        
-        // Return the ID of the player who has the ball after A passes
-        return currentPlayer;
+
+        // The player at the top of the stack currently possesses the ball
+        return stack.peek();
+    }
+    public static void main(String[] args) {
+        int A = 10;
+        int B = 23;
+        int[] C = {83,63,60,0,47,0,99,9,0,0};
+        System.out.println(solve(A,B,C));
     }
 }
