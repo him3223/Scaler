@@ -1,4 +1,4 @@
-public class Solution {
+public class Solution3 {
     public static int solve(int A) {
         if (A<10) return A==1 ? 1:0;
         int sum = 0;

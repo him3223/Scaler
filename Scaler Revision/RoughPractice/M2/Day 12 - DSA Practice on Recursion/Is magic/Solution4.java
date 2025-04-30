@@ -1,4 +1,4 @@
-public class Solution {
+public class Solution4 {
     public static int solve(int A) {
         if (A<10) return A==1 ? 1:0;
         int sum = 0;
@@ -9,7 +9,8 @@ public class Solution {
         return solve(sum);
     }
     public static void main(String[] args) {
-        int A = 83557;
+        int A = 5231;
+        // int A = 83557;
         System.out.println(solve(A));
     }
 }

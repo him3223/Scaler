@@ -1,9 +1,9 @@
-public class Solution {
+public class Solution2 {
     public static int solve(int A) {
         if (A<10) return A==1 ? 1:0;
         int sum = 0;
         while (A>0) {
-            sum+=A%10;
+            sum += A%10;
             A/=10;
         }
         return solve(sum);
