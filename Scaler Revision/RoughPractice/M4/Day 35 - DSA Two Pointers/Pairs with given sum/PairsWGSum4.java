@@ -1,4 +1,4 @@
-public class PairsWGSum2 {
+public class PairsWGSum4 {
 
     public static boolean hasPairWithSum(int[] arr, int sum) {
         int len = arr.length;
@@ -8,7 +8,7 @@ public class PairsWGSum2 {
         while (a<b) {
             currSum = arr[a]+arr[b];
             if (currSum==sum) return true;
-            else if (currSum < sum) a++;
+            if (currSum<sum) a++;
             else b--;
         }
         return false;
