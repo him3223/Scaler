@@ -1,0 +1,6 @@
+Solve this
+Also Calculate Time & Space Complexity
+Add main method
+Add easy dry and run
+loop variable should be (a,b) not (i,j)
+len of array should be store in variable len like int len = A.length;
