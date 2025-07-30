@@ -1,4 +1,5 @@
 Solve this
+add brute force also
 Also Calculate Time & Space Complexity
 Add main method
 Add easy dry and run
