@@ -1,6 +1,10 @@
+“For this whole conversation, give me short, direct answers, no deep reasoning unless I say ‘detailed’.”
+
 Solve this
-add brute force also
+add brute force,
+add optimized solutions
 Also Calculate Time & Space Complexity
+Add Aproach
 Add main method
 Add easy dry and run
 loop variable should be (a,b) not (i,j)

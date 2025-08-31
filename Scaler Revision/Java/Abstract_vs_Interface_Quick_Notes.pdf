@@ -1,0 +1,97 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1923 >>
+stream
+BT
+/F1 11 Tf
+15 TL
+1 0 0 1 50 792 Tm
+(ABSTRACT VS INTERFACE \(Java\)  Quick Notes) Tj
+T*
+T*
+(1\) Definitions) Tj
+T*
+(- Abstract class: may have abstract + concrete methods; can hold state; can have constructors.) Tj
+T*
+(- Interface: contract of behaviors; methods are abstract by default; supports default/static ) Tj
+T*
+(\(Java 8+\) and private \(Java 9+\) helpers; fields are constants.) Tj
+T*
+T*
+(2\) Syntax) Tj
+T*
+(abstract class Vehicle { int wheels; Vehicle\(int w\){ this.wheels = w; } abstract void move\(\); ) Tj
+T*
+(void horn\(\){ } }) Tj
+T*
+(interface Payable { void pay\(double amt\); default void receipt\(\){ } static boolean valid\(\){ ) Tj
+T*
+(return true; } }) Tj
+T*
+(class Car extends Vehicle implements Payable { Car\(\){ super\(4\); } void move\(\){ /*...*/ } public) Tj
+T*
+( void pay\(double a\){ } }) Tj
+T*
+T*
+(3\) Key Differences) Tj
+T*
+(- Inheritance: class extends ONE abstract class; class can implement MULTIPLE interfaces.) Tj
+T*
+(- State: abstract class can have instance fields; interface fields are public static final ) Tj
+T*
+(\(constants\).) Tj
+T*
+(- Constructors: abstract class  YES; interface  NO.) Tj
+T*
+(- Access: abstract members can be private/protected/package/public; interface methods are ) Tj
+T*
+(public \(private allowed only for helpers\).) Tj
+T*
+(- Use case: abstract class for shared state + partial impl; interface for capability/role ) Tj
+T*
+(across unrelated classes.) Tj
+T*
+T*
+(4\) When to Use) Tj
+T*
+(- Prefer INTERFACE for APIs, plugins, and multiple inheritance of type.) Tj
+T*
+(- Use ABSTRACT CLASS when sharing common state/logic, default fields, or protected helpers.) Tj
+T*
+T*
+(5\) Gotchas) Tj
+T*
+(- Default method conflict: override and disambiguate with InterfaceName.super.method\(\).) Tj
+T*
+(- Avoid state in interfaces \(not allowed, only constants\).) Tj
+T*
+(- You can put default methods in interfaces, but keep them small to avoid tight coupling.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2286
+%%EOF
