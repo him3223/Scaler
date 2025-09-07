@@ -1,0 +1,7 @@
+write a java 8 code
+code should not use Enum, lambda
+code should have main method,
+code should compile and run,
+code should be vertical not horizontal
+loop variable should be (a,b) not (i,j)
+len of array should be store in variable len like int len = A.length;
